@@ -1,10 +1,12 @@
+import PropTypes from "prop-types";
 
 const Header = ({price, freeMoney}) => {
+  
     return (
         <section>
             <div className="flex justify-between items-center">
                 <div className="">
-                    <img src="../assets/logo.png" alt="" />
+                    <img src="assets/logo.png" alt="" />
                 </div>
                 <div className="">
                     <ul className="flex justify-between items-center gap-12 font-semibold">
@@ -15,7 +17,7 @@ const Header = ({price, freeMoney}) => {
                         <div className="border-2 rounded-2xl p-3 flex justify-center items-center gap-5">
                             <p>{price}</p>
                             <p>Coin</p>
-                            <img className="w-[30px]" src="../assets/dollar.png" alt="" />
+                            <img className="w-[30px]" src="assets/dollar.png" alt="" />
                         </div>
                     </ul>
                 </div>
@@ -30,5 +32,12 @@ const Header = ({price, freeMoney}) => {
        
     );
 };
+
+
+Header.propTypes={
+
+    price:PropTypes.number.isRequired,
+    freeMoney:PropTypes.func.isRequired
+}
 
 export default Header;

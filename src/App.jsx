@@ -36,12 +36,15 @@ function App() {
 
   
   const freeMoney = () =>{
-   
     const newBalance = price + 1000000
     toast.success("Credit Added To Your Account");
     setPrice(newBalance)
   }
 
+  const addDeletedPlayerMoney = (id) =>{
+    const adddedMoney = parseFloat(id.price) + price;
+    setPrice(adddedMoney)
+  }
 
 
   const [selectedPlayers, setSelectedPlayers] = useState([]);
@@ -84,14 +87,11 @@ function App() {
   }
 
  
-
-  
   const [visible , setVisible] = useState(false)
   const [visible2, setVisible2] = useState(true);
   const [visible3, setVisible3] = useState(true);
 
   const click = () =>{
-
     setVisible(true)
     setVisible2(false)
     setVisible3(true)
@@ -110,23 +110,20 @@ function App() {
   }
 
  
-
-
-
- const deletePlayers = (id) => {
-    const customFilter = (arr, predicate) => {
+  const deletePlayers = (id) => {
+    const filteredPlayer = (arr, predicate) => {
       return arr.reduce((acc, item) => {
           if (predicate(item)) {
-              acc.push(item);
+            acc.push(item);
           }
           return acc;
-      }, []);
+      },[]);
   };
   
-  let filtered = customFilter(selectedPlayers, player => player.playerId != id);
-  console.log(filtered); 
+  let filtered = filteredPlayer(selectedPlayers, player => player.playerId != id);
   setSelectedPlayers(filtered)
  }
+ 
 
 
 
@@ -138,7 +135,7 @@ function App() {
         
         <ToastContainer position="top-center" />
         
-        <Players selectedPlayers={selectedPlayers} choosePlayer={choosePlayer} visible={visible} visible2={visible2} visible3={visible3} click={click} 
+        <Players addDeletedPlayerMoney={addDeletedPlayerMoney} selectedPlayers={selectedPlayers} choosePlayer={choosePlayer} visible={visible} visible2={visible2} visible3={visible3} click={click} 
                  click2={click2} click3={click3} active={active} buttonActiveState={buttonActiveState} deletePlayers={deletePlayers}></Players>
       </div>
       <Footer></Footer>

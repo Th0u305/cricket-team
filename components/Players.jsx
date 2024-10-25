@@ -2,8 +2,9 @@ import { useEffect } from "react";
 import { useState } from "react";
 import '../components/css/Button.css'
 import Selected from "./Selected";
+import PropTypes from "prop-types";
 
-const Players = ({choosePlayer,buttonActiveState, active, visible, visible2, visible3, click, click2, click3, selectedPlayers,deletePlayers}) => {
+const Players = ({choosePlayer,buttonActiveState, active, visible, visible2, visible3, click, click2, click3, selectedPlayers,deletePlayers,addDeletedPlayerMoney}) => {
    
     const [player, setPlayer] = useState([]);
     useEffect(()=>{
@@ -36,7 +37,7 @@ const Players = ({choosePlayer,buttonActiveState, active, visible, visible2, vis
                 { visible2 &&
                     player.map(player => (
 
-                        <div key={player.playerId} className="card card-compact bg-base-100 shadow-xl">
+                        <div key={player.playerId} className="card card-compact bg-base-100 shadow-xl p-5 border-2">
                           <figure>
                             <img src={player.image} alt="cricket players" />
                           </figure>
@@ -49,14 +50,18 @@ const Players = ({choosePlayer,buttonActiveState, active, visible, visible2, vis
                                 <h2 className="bg-gray-200 rounded-xl px-5 py-2">{player.role}</h2>
                             </div>
                             
-                            <div className="">
+                            <div className="space-y-5">
                                 <div className="flex">
-                                    <p className="font-semibold">{player.battingType}</p>
-                                    <p className="text-right text-gray-500">{player.battingType}</p>
+                                    <p className="font-semibold">BattingType</p>
+                                    <p className="text-right text-gray-600">{player.battingType}</p>
+                                </div>
+                                <div className="flex">
+                                    <p className="font-semibold">BowlingType</p>
+                                    <p className="text-right text-gray-600">{player.bowlingType}</p>
                                 </div>
                                 <div className="flex justify-center items-center">
                                     <p className="font-semibold">Price: <i className="fa-solid fa-bangladeshi-taka-sign"></i> {player.price}BDT</p>
-                                    <button onClick={()=> {choosePlayer(player)}} className="btn mt-3">Choose Player</button>
+                                    <button onClick={()=> {choosePlayer(player)}} className="btn border-2 border-gray-500">Choose Player</button>
                                 </div>
 
                             </div>
@@ -72,7 +77,7 @@ const Players = ({choosePlayer,buttonActiveState, active, visible, visible2, vis
             </div>
             { visible &&
                 <div>
-                    <Selected deletePlayers={deletePlayers} selectedPlayers={selectedPlayers} ></Selected>
+                    <Selected addDeletedPlayerMoney={addDeletedPlayerMoney} deletePlayers={deletePlayers} selectedPlayers={selectedPlayers} ></Selected>
                     { visible3 &&
                         <button onClick={()=> click3()} className="btn btn-xs text-lg sm:btn-sm md:btn-md lg:btn-lg bg-active">Add More Player</button>
                     }
@@ -84,5 +89,21 @@ const Players = ({choosePlayer,buttonActiveState, active, visible, visible2, vis
         </section>
     );
 };
+
+Players.propTypes={
+
+    choosePlayer:PropTypes.func.isRequired,
+    buttonActiveState: PropTypes.func.isRequired,
+    active :PropTypes.object.isRequired,
+    visible: PropTypes.bool.isRequired,
+    visible2:  PropTypes.bool.isRequired,
+    visible3:  PropTypes.bool.isRequired,
+    click:PropTypes.func.isRequired,
+    click2: PropTypes.func.isRequired,
+    click3: PropTypes.func.isRequired,
+    selectedPlayers:PropTypes.array.isRequired,
+    deletePlayers:PropTypes.func.isRequired,
+    addDeletedPlayerMoney:PropTypes.func.isRequired,
+}
 
 export default Players;

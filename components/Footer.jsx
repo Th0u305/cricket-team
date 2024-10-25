@@ -7,7 +7,7 @@ const Footer = () => {
                 <h1 className="text-2xl font-bold">Subscribe to our Newsletter</h1>
                 <p className="text-gray-400">Get the latest updates and news right in your inbox!</p>
                 <div className="flex justify-center items-center">
-                    <input type="text" placeholder="Enter Your Email" className=" input input-bordered w-[30em] max-w-xs" />
+                    <input type="text" placeholder="Enter Your Email" className="focus:outline-none input input-bordered w-[30em] max-w-xs" />
                     <button className="btn bg-gradient-to-r from-purple-400 via-yellow-400 to-yellow-400 w-[10em]">Subscribe</button>
 
                 </div>
@@ -16,7 +16,7 @@ const Footer = () => {
 
             <div className="bg-[#06091A] text-white flex flex-col justify-center items-center mt-28 pt-48">
 
-                <img src="../assets/logo.png" alt="" />
+                <img src="assets/logo.png" alt="" />
                 <div className="flex justify-between items-center w-[90%] mb-12">
                     <div className="w-[30%]">
                         <h1 className="text-lg mb-3 w-fit">About Us</h1>
@@ -35,8 +35,8 @@ const Footer = () => {
                         <h1 className="text-lg">Subscribe</h1>
                         <p className="text-sm text-gray-400">Subscribe to our newsletter for the latest updates.</p>
                         <div className="flex">
-                            <input type="text" placeholder="Enter Your Email" className="input input-bordered w-[30em] max-w-xs" />
-                            <button className="btn bg-gradient-to-r from-purple-400 via-yellow-400 to-yellow-400 w-[10em]">Subscribe</button>
+                            <input type="text" placeholder="Enter Your Email" className="input input-bordered w-[30em] max-w-xs text-black" />
+                            <button className="border-none btn bg-gradient-to-r from-purple-400 via-yellow-400 to-yellow-400 w-[10em]">Subscribe</button>
                         </div>  
                     </div>
                 </div>

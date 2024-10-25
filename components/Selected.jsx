@@ -1,14 +1,6 @@
 import '../components/css/Button.css'
 
-const Selected = ({selectedPlayers,deletePlayers}) => {
-
-    // const deletePlayers = () =>{
-    //     selectedPlayers.map(p =>(
-    //         console.log(p.playerId)
-    //     ))
-        
-        
-    // }
+const Selected = ({selectedPlayers,deletePlayers,addDeletedPlayerMoney}) => {
 
     return (
         selectedPlayers.map(p =>(
@@ -22,12 +14,11 @@ const Selected = ({selectedPlayers,deletePlayers}) => {
                         <p className="text-gray-400">{p.battingType}</p>
                     </div>
                 </div>
-                <button onClick={()=> deletePlayers(p.playerId)} className="btn"><i className="fa-solid fa-delete-left fa-2xl"></i></button>
+                <button onClick={()=> {deletePlayers(p.playerId); addDeletedPlayerMoney(p)}} className="btn"><i className="fa-solid fa-delete-left fa-2xl"></i></button>
             </div>
         </section>
     
-        ))
-      
+        ))      
     );
 };
 
