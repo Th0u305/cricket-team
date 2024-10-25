@@ -1,0 +1,7 @@
+.bg-active{
+    background-color: #E7FE29;
+    color: black;
+}
+.bg-active:hover{
+    background-color: #E7FE29;
+}

@@ -1,0 +1,125 @@
+{
+    "players": [
+      {
+        "playerId": 1,
+        "name": "Shakib Al Hasan",
+        "country": "Bangladesh",
+        "image": "https://media.gettyimages.com/id/1778470617/photo/delhi-india-shakib-al-hasan-of-bangladesh-poses-after-being-named-player-of-the-match.jpg?s=612x612&w=0&k=20&c=2Ro6WRAxpRYcvTz36ik9RfS3OKMkvHgtGF6721ltRow=",
+        "role": "All-rounder",
+        "battingType": "Left-hand Bat",
+        "bowlingType": "Slow Left-arm Orthodox",
+        "price": "1 "
+      },
+      {
+        "playerId": 2,
+        "name": "Mustafizur Rahman",
+        "country": "Bangladesh",
+        "image": "https://wallpapercave.com/wp/wp9797279.jpg",
+        "role": "Bowler",
+        "battingType": "Left-hand Bat",
+        "bowlingType": "Left-arm Fast-medium",
+        "price": "200000"
+      },
+      {
+        "playerId": 3,
+        "name": "Virat Kohli",
+        "country": "India",
+        "image": "https://wallpapercave.com/uwp/uwp4237107.jpeg",
+        "role": "Batsman",
+        "battingType": "Right-hand Bat",
+        "bowlingType": "Right-arm Medium",
+        "price": "850000"
+      },
+      {
+        "playerId": 4,
+        "name": "Kane Williamson",
+        "country": "New Zealand",
+        "image": "https://wallpapercave.com/wp/wp5739697.jpg",
+        "role": "Batsman",
+        "battingType": "Right-hand Bat",
+        "bowlingType": "Right-arm Offbreak",
+        "price": "70000"
+      },
+      {
+        "playerId": 5,
+        "name": "Pat Cummins",
+        "country": "Australia",
+        "image": "https://wallpapercave.com/wp/wp4899875.jpg",
+        "role": "Bowler",
+        "battingType": "Right-hand Bat",
+        "bowlingType": "Right-arm Fast",
+        "price": "75000"
+      },
+      {
+        "playerId": 6,
+        "name": "Jos Buttler",
+        "country": "England",
+        "image": "https://wallpapercave.com/wp/wp4467323.jpg",
+        "role": "Wicketkeeper Batsman",
+        "battingType": "Right-hand Bat",
+        "bowlingType": "N/A",
+        "price": "40000"
+      },
+      {
+        "playerId": 7,
+        "name": "Trent Boult",
+        "country": "New Zealand",
+        "image": "https://wallpapercave.com/wp/wp6513319.jpg",
+        "role": "Bowler",
+        "battingType": "Right-hand Bat",
+        "bowlingType": "Left-arm Fast-medium",
+        "price": "230000"
+      },
+      {
+        "playerId": 8,
+        "name": "Rashid Khan",
+        "country": "Afghanistan",
+        "image": "https://wallpapercave.com/wp/wp6567036.jpg",
+        "role": "Bowler",
+        "battingType": "Right-hand Bat",
+        "bowlingType": "Right-arm Legbreak",
+        "price": "905300"
+      },
+      {
+        "playerId": 9,
+        "name": "Ben Stokes",
+        "country": "England",
+        "image": "https://d.ibtimes.co.uk/en/full/1661858/ben-stokes.jpg?w=1600&h=1200&q=88&f=832fc703a8be8016f74e2e6bb42d54b3",
+        "role": "All-rounder",
+        "battingType": "Left-hand Bat",
+        "bowlingType": "Right-arm Fast-medium",
+        "price": "29500"
+      },
+      {
+        "playerId": 10,
+        "name": "David Warner",
+        "country": "Australia",
+        "image": "https://wallpapers.com/images/hd/david-warner-wearing-helmet-xmrev0471vr86w0t.jpg",
+        "role": "Batsman",
+        "battingType": "Left-hand Bat",
+        "bowlingType": "Right-arm Legbreak",
+        "price": "46000 "
+      },
+      {
+        "playerId": 11,
+        "name": "Jasprit Bumrah",
+        "country": "India",
+        "image": "https://wallpapercave.com/wp/wp4417144.jpg",
+        "role": "Bowler",
+        "battingType": "Right-hand Bat",
+        "bowlingType": "Right-arm Fast",
+        "price": "800000 "
+      },
+      {
+        "playerId": 12,
+        "name": "Quinton de Kock",
+        "country": "South Africa",
+        "image": "https://wallpapercave.com/wp/wp4764078.jpg",
+        "role": "Wicketkeeper Batsman",
+        "battingType": "Left-hand Bat",
+        "bowlingType": "N/A",
+        "price": "170000 "
+      }
+    ]
+  }
+  
