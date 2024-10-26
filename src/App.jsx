@@ -11,7 +11,6 @@ function App() {
   
   const [price, setPrice] = useState(0);
 
-
   const [active, setActive] = useState({
     available : true,
     status : "available"
@@ -123,14 +122,52 @@ function App() {
   let filtered = filteredPlayer(selectedPlayers, player => player.playerId != id);
   setSelectedPlayers(filtered)
  }
+
+
+
+  const inputButton = () =>{
+    const inputValue = document.getElementById('inputValue');
+    const formId = document.getElementById('fromId')
+    event.preventDefault(formId);
+    const value = inputValue.value;
+
+    if(value.length === 0){
+      localStorage.clear();
+    }
+    else{
+      localStorage.setItem("emailAddress", JSON.stringify(value));
+        // eslint-disable-next-line no-undef
+        modal.showModal()
+    }
+  
+  }
  
+  window.onload = () =>{
+    const getMail = JSON.parse(localStorage.getItem("emailAddress"));
+    const mailDiv = document.getElementById("message")
+    const mailDivH1 = document.createElement('h1')
+    mailDivH1.innerText = 
+             `
+         
+              Welcome back, ${getMail} You're subscribed to our newsletter.
+              
+             
+             `
+      mailDiv.appendChild(mailDivH1)
+
+    if(getMail){
+     
+      // eslint-disable-next-line no-undef
+      modal2.showModal()
+    } 
+  }
 
 
 
   return (
 
-    <section> 
-      <div className='container mx-auto mt-12'>
+    <section className=''> 
+      <div className='container mx-auto p-5'>
         <Header price={price} freeMoney={freeMoney}></Header>
         
         <ToastContainer position="top-center" />
@@ -138,7 +175,7 @@ function App() {
         <Players addDeletedPlayerMoney={addDeletedPlayerMoney} selectedPlayers={selectedPlayers} choosePlayer={choosePlayer} visible={visible} visible2={visible2} visible3={visible3} click={click} 
                  click2={click2} click3={click3} active={active} buttonActiveState={buttonActiveState} deletePlayers={deletePlayers}></Players>
       </div>
-      <Footer></Footer>
+      <Footer inputButton={inputButton}></Footer>
     </section>
     
   )

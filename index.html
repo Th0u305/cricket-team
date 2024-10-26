@@ -5,7 +5,7 @@
 
   
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="assets/cricket.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/cricket.png" type="image/x-icon">
     <title>BPL</title>
 
     <!-- tailwind  -->
@@ -33,9 +33,6 @@
               fontFamily: {
                   sora: "Sora",
               },
-              backgroundImage: {
-                  'image': "url('assets/bg-shadow.png')",
-                },
             },
         },
     }
@@ -44,5 +41,33 @@
   <body class="font-sora">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+    <button class="btn hidden" onclick="modal.showModal()">Open Modal</button>
+    <dialog id="modal" class="modal">
+      <div class="modal-box">
+        <div class="modal-action flex flex-col items-center justify-center gap-5">
+          <img class="rounded-full" src="./public/assets/Animation - 1729925323093.gif" alt="">
+          <h1 class="text-3xl font-semibold">Success</h1>
+          <p class="text-lg text-gray-600 text-center">Congratulation for subscribing <br>our newsletter</p>
+        </div>
+      </div>
+    </dialog>
+
+    <button class="btn hidden" onclick="modal2.showModal()">Open Modal</button>
+    <dialog id="modal2" class="modal">
+      <div class="modal-box flex flex-col justify-center items-center">
+        <img class="w-1/2" src="./assets/file.png" alt="">
+        <img class="" src="./assets/welcome.gif" alt="">
+        <div id="message" class="text-center text-xl font-semibold">
+        </div>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn w-[10em] h-[1em] border-2 border-gray-300">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
   </body>
 </html>
