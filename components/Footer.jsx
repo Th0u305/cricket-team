@@ -12,7 +12,7 @@ const Footer = () => {
             </div>
 
             <div className="bg-[#06091A] text-white flex flex-col justify-center items-center mt-28 pt-48 space-y-8">
-                <img src="../public/assets/logo-footer.png" alt="" />
+                <img src="./assets/logo-footer.png" alt="" />
                 <div id='card3' className="flex flex-col justify-between items-center xl:items-end w-[90%] xl:w-[77%] space-y-8 xl:flex-row">
                     <div className="flex justify-between items-top xl:w-[54%]">
                         <div className="text-left items-center w-1/2 ">
