@@ -21,7 +21,7 @@ const Header = ({price, freeMoney}) => {
                     </div>
                 </div>
             </div>
-            <div className="bg-[#000000dc] bg-image bg-no-repeat bg-cover rounded-2xl mt-12 flex flex-col justify-center items-center text-center gap-12 py-12">
+            <div className="bg-[#000000dc] bg-[url('./assets/bg-shadow.png')] bg-no-repeat bg-cover rounded-2xl mt-12 flex flex-col justify-center items-center text-center gap-12 py-12">
                 <img src="./assets/banner-main.png" alt="" />
                 <h1 className="text-3xl font-semibold text-white">Assemble Your Ultimate Dream 11 Cricket Team</h1>
                 <p className="text-gray-300 text-lg">Beyond Boundaries Beyond Limits</p>
