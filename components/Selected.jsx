@@ -5,8 +5,8 @@ const Selected = ({selectedPlayers,deletePlayers,addDeletedPlayerMoney}) => {
     return (
         selectedPlayers.map(p =>(
 
-        <section key={p.playerId} className="mb-12">
-            <div className="flex justify-between items-center border-2 rounded-2xl p-5">
+        <section key={p.playerId} className="mb-8">
+            <div className="flex flex-col justify-between items-center border-2 rounded-2xl p-5 space-y-8 md:flex-row">
                 <div className="flex justify-center items-center gap-5">
                     <img className="w-[200px] rounded-2xl" src={p.image} alt="" />
                     <div className="space-y-4">
@@ -14,7 +14,7 @@ const Selected = ({selectedPlayers,deletePlayers,addDeletedPlayerMoney}) => {
                         <p className="text-gray-400">{p.battingType}</p>
                     </div>
                 </div>
-                <button onClick={()=> {deletePlayers(p.playerId); addDeletedPlayerMoney(p)}} className="btn"><i className="fa-solid fa-delete-left fa-2xl"></i></button>
+                <button onClick={()=> {deletePlayers(p.playerId); addDeletedPlayerMoney(p)}} className="btn btn-wide border-2 border-gray-500"><i className="fa-solid fa-delete-left fa-2xl"></i></button>
             </div>
         </section>
     

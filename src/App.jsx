@@ -129,8 +129,8 @@ function App() {
 
   return (
 
-    <section> 
-      <div className='container mx-auto mt-12'>
+    <section className=''> 
+      <div className='container mx-auto p-5'>
         <Header price={price} freeMoney={freeMoney}></Header>
         
         <ToastContainer position="top-center" />
